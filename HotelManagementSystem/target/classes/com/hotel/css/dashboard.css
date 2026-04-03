@@ -1,0 +1,383 @@
+/* ================================================================
+   Grand Vista Hotel Management System — Dashboard CSS
+   Modern dark luxury theme with gold accents
+   ================================================================ */
+
+/* ── Root Variables ─────────────────────────────────────────── */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-background-color: #0f1117;
+}
+
+/* ── Scroll Bars (dark minimal) ─────────────────────────────── */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(201, 169, 110, 0.25);
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.45);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 2;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: rgba(201, 169, 110, 0.3);
+    -fx-shape: "";
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
+
+/* ── TableView Styling ──────────────────────────────────────── */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(201, 169, 110, 0.12);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(201, 169, 110, 0.08);
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #c9a96e;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 1.5px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(201, 169, 110, 0.06) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.05);
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: rgba(201, 169, 110, 0.12);
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #e8e8f0;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: rgba(220, 220, 240, 0.85);
+    -fx-font-size: 13px;
+    -fx-padding: 10 12 10 12;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: rgba(90, 106, 128, 0.7);
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+/* ── ComboBox ───────────────────────────────────────────────── */
+.combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #e8e8f0;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1e2235;
+    -fx-border-color: rgba(201, 169, 110, 0.25);
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 8);
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #c0c8d8;
+    -fx-background-color: transparent;
+    -fx-padding: 8 14 8 14;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.12);
+    -fx-text-fill: #e8e8f0;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: rgba(201, 169, 110, 0.2);
+    -fx-text-fill: #c9a96e;
+}
+
+.combo-box .arrow {
+    -fx-background-color: rgba(201, 169, 110, 0.5);
+}
+
+/* ── TextField / TextArea ────────────────────────────────────── */
+.text-field, .text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #e0e0f0;
+    -fx-prompt-text-fill: rgba(90, 106, 128, 0.7);
+    -fx-highlight-fill: rgba(201, 169, 110, 0.3);
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: rgba(201, 169, 110, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(201, 169, 110, 0.15), 8, 0, 0, 0);
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* ── DatePicker ─────────────────────────────────────────────── */
+.date-picker {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup {
+    -fx-background-color: #1e2235;
+    -fx-border-color: rgba(201, 169, 110, 0.25);
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 8);
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: rgba(201, 169, 110, 0.08);
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup > * > .spinner > .label {
+    -fx-text-fill: #c9a96e;
+    -fx-font-weight: bold;
+}
+
+.date-picker-popup > * > .calendar-grid > .date-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #c0c8d8;
+}
+
+.date-picker-popup > * > .calendar-grid > .today {
+    -fx-border-color: #c9a96e;
+    -fx-border-radius: 50%;
+    -fx-text-fill: #c9a96e;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────── */
+.spinner {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #e0e0f0;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: rgba(201, 169, 110, 0.1);
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.2);
+}
+
+/* ── TabPane ─────────────────────────────────────────────────── */
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-max-height: 38px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+    -fx-border-color: transparent transparent rgba(201, 169, 110, 0.12) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 6 16 6 16;
+}
+
+.tab .tab-label {
+    -fx-text-fill: rgba(90, 106, 128, 0.9);
+    -fx-font-size: 13px;
+}
+
+.tab:selected {
+    -fx-background-color: rgba(201, 169, 110, 0.1);
+    -fx-border-color: transparent transparent #c9a96e transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #c9a96e;
+    -fx-font-weight: bold;
+}
+
+.tab:hover .tab-label {
+    -fx-text-fill: #e0e0f0;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ── Separator ───────────────────────────────────────────────── */
+.separator .line {
+    -fx-background-color: rgba(201, 169, 110, 0.12);
+    -fx-border-color: transparent;
+}
+
+/* ── ListView ────────────────────────────────────────────────── */
+.list-view {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-border-color: rgba(201, 169, 110, 0.15);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(200, 210, 230, 0.9);
+    -fx-padding: 8 14 8 14;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent transparent rgba(201, 169, 110, 0.06) transparent;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.07);
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: rgba(201, 169, 110, 0.15);
+    -fx-text-fill: #c9a96e;
+}
+
+/* ── Alert Dialog ────────────────────────────────────────────── */
+.dialog-pane {
+    -fx-background-color: #1a1f2e;
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: rgba(201, 169, 110, 0.08);
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #e8e8f0;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #a0aab8;
+    -fx-font-size: 13px;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: rgba(201, 169, 110, 0.15);
+    -fx-text-fill: #c9a96e;
+    -fx-border-color: rgba(201, 169, 110, 0.3);
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: rgba(201, 169, 110, 0.25);
+}
+
+/* ── Context Menu ────────────────────────────────────────────── */
+.context-menu {
+    -fx-background-color: #1e2235;
+    -fx-border-color: rgba(201, 169, 110, 0.2);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 16, 0, 0, 6);
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+}
+
+.menu-item .label {
+    -fx-text-fill: #c0c8d8;
+}
+
+.menu-item:focused {
+    -fx-background-color: rgba(201, 169, 110, 0.12);
+}
+
+/* ── Progress Bar (for future use) ──────────────────────────── */
+.progress-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 4px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #c9a96e, #e8c987);
+    -fx-background-radius: 4px;
+    -fx-background-insets: 0;
+}

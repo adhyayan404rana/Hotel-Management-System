@@ -1,0 +1,27 @@
+/* ================================================================
+   Grand Vista Hotel Management System — Splash Screen CSS
+   ================================================================ */
+
+.root {
+    -fx-background-color: #0a0a1a;
+    -fx-font-family: "Georgia", serif;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(201, 169, 110, 0.2);
+    -fx-background-radius: 3px;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
